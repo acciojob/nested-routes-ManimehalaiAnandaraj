@@ -1,5 +1,11 @@
 export const categories = [
   {
+    name: 'Home',
+    items:[
+       
+    ]
+  },
+  {
     name: 'Women',
     items: [
       { id: 'dress', name: 'Summer Dress', description: 'Light and airy summer dress.' },
