@@ -1,24 +1,17 @@
+// Layout.js
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { categories } from './data';
 
-const Layout = () => {
+export default function Layout() {
   return (
     <div>
       <nav>
-        <h2>Categories</h2>
-        <ul>
-          {categories.map((category) => (
-            <li key={category.name}>
-              <Link to={`/category/${category.name.toLowerCase()}`}>{category.name}</Link>
-            </li>
-          ))}
-        </ul>
+        <Link to="/">Home</Link>
+        <Link to="/categories">Categories</Link>
       </nav>
-      <hr />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
-};
-
-export default Layout;
+}

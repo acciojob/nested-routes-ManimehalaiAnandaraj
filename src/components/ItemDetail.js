@@ -1,25 +1,15 @@
+// ItemDetail.js
+import { useParams } from 'react-router-dom';
 import React from 'react';
-import { useParams, useOutletContext } from 'react-router-dom';
 
-const ItemDetail = () => {
-  const { itemId } = useParams();
-  const category = useOutletContext();
-
-  // Check if category is defined and find the item
-  if (!category) {
-    return <h4>No category found</h4>;
-  }
-
-  const item = category.items.find(i => i.id === itemId);
-
-  if (!item) return <h4>Item not found</h4>;
-
+export default function ItemDetail() {
+  const { categoryId, itemId } = useParams();
+  
   return (
     <div>
-      <h4>{item.name}</h4>
-      <p>{item.description}</p>
+      <h4>Item Details</h4>
+      <p>Category: {categoryId}</p>
+      <p>Item: {itemId}</p>
     </div>
   );
-};
-
-export default ItemDetail;
+}
