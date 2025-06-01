@@ -1,22 +1,24 @@
 import React from 'react';
 import { useParams, Link, Outlet } from 'react-router-dom';
-import { categories } from '../data';
+import { categories } from './data';
 
 const Category = () => {
   const { categoryName } = useParams();
-  const items = categories[categoryName] || [];
+  const category = categories.find(cat => cat.name.toLowerCase() === categoryName.toLowerCase());
+
+  if (!category) return <h3>Category not found</h3>;
 
   return (
     <div>
-      <h2>{categoryName} Items</h2>
+      <h3>{category.name} Items</h3>
       <ul>
-        {items.map(item => (
+        {category.items.map(item => (
           <li key={item.id}>
-            <Link to={`${item.id}`}>{item.name}</Link>
+            <Link to={item.id}>{item.name}</Link>
           </li>
         ))}
       </ul>
-      <Outlet />
+      <Outlet context={category} />
     </div>
   );
 };

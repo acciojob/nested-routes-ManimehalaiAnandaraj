@@ -1,13 +1,19 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { categories } from './data';
 
 const Layout = () => {
   return (
     <div>
-      <h1>Fashion Store</h1>
       <nav>
-        <Link to="category/Women">Women</Link> |{" "}
-        <Link to="category/Men">Men</Link>
+        <h2>Categories</h2>
+        <ul>
+          {categories.map((category) => (
+            <li key={category.name}>
+              <Link to={`/category/${category.name.toLowerCase()}`}>{category.name}</Link>
+            </li>
+          ))}
+        </ul>
       </nav>
       <hr />
       <Outlet />

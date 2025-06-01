@@ -1,22 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
-import Category from '.Category';
+import Category from './Category';
 import ItemDetail from './ItemDetail';
 
-function App() {
+
+const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<p>Select a category</p>} />
+          <Route index element={<h2>Welcome! Please select a category.</h2>} />
           <Route path="category/:categoryName" element={<Category />}>
             <Route path=":itemId" element={<ItemDetail />} />
           </Route>
         </Route>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

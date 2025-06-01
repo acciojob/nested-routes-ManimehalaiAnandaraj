@@ -1,18 +1,18 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { categories } from '../data';
+import { useParams, useOutletContext } from 'react-router-dom';
 
 const ItemDetail = () => {
-  const { categoryName, itemId } = useParams();
-  const item = (categories[categoryName] || []).find(item => item.id === itemId);
+  const { itemId } = useParams();
+  const category = useOutletContext();
 
-  if (!item) return <p>Item not found.</p>;
+  const item = category.items.find(i => i.id === itemId);
+
+  if (!item) return <h4>Item not found</h4>;
 
   return (
     <div>
-      <h3>Item Detail</h3>
-      <p><strong>Name:</strong> {item.name}</p>
-      <p><strong>ID:</strong> {item.id}</p>
+      <h4>{item.name}</h4>
+      <p>{item.description}</p>
     </div>
   );
 };
