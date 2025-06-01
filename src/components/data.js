@@ -1,22 +1,25 @@
 export const categories = [
   {
-    name: 'Home',
-    items:[
-       
-    ]
-  },
-  {
     name: 'Women',
     items: [
-      { id: 'dress', name: 'Summer Dress', description: 'Light and airy summer dress.' },
-      { id: 'jacket', name: 'Winter Jacket', description: 'Warm and cozy winter jacket.' }
-    ]
+      { id: 'dress1', name: 'Summer Dress', description: 'A beautiful summer dress.' },
+      { id: 'dress2', name: 'Evening Gown', description: 'An elegant evening gown.' },
+      { id: 'dress3', name: 'Summer Dress', description: 'A beautiful summer dress.' },
+      { id: 'dress4', name: 'Evening Gown', description: 'An elegant evening gown.' },
+      { id: 'dress5', name: 'Summer Dress', description: 'A beautiful summer dress.' },
+      { id: 'dress6', name: 'Evening Gown', description: 'An elegant evening gown.' },
+    ],
   },
   {
     name: 'Men',
     items: [
-      { id: 'shirt', name: 'Formal Shirt', description: 'Perfect for office wear.' },
-      { id: 'jeans', name: 'Blue Jeans', description: 'Comfortable and stylish.' }
-    ]
-  }
+      { id: 'shirt1', name: 'Formal Shirt', description: 'A stylish formal shirt.' },
+      { id: 'pants1', name: 'Casual Pants', description: 'Comfortable casual pants.' },
+       { id: 'shirt2', name: 'Formal Shirt', description: 'A stylish formal shirt.' },
+      { id: 'pants2', name: 'Casual Pants', description: 'Comfortable casual pants.' },
+       { id: 'shirt3', name: 'Formal Shirt', description: 'A stylish formal shirt.' },
+      { id: 'pants3', name: 'Casual Pants', description: 'Comfortable casual pants.' },
+    ],
+  },
+  // Add more categories and items as needed
 ];

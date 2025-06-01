@@ -14,7 +14,7 @@ const Category = () => {
       <ul>
         {category.items.map(item => (
           <li key={item.id}>
-            <Link to={item.id}>{item.name}</Link>
+            <Link to={`/category/${category.name.toLowerCase()}/${item.id}`}>{item.name}</Link>
           </li>
         ))}
       </ul>

@@ -4,20 +4,20 @@ import Layout from './Layout';
 import Category from './Category';
 import ItemDetail from './ItemDetail';
 
-
 const App = () => {
   return (
+    <div>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<h2>Welcome! Please select a category.</h2>} />
-        
           <Route path="category/:categoryName" element={<Category />}>
             <Route path=":itemId" element={<ItemDetail />} />
           </Route>
         </Route>
       </Routes>
     </BrowserRouter>
+    </div>
   );
 };
 
