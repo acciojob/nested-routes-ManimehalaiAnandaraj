@@ -9,18 +9,10 @@ const Category = () => {
     women: [
       { id: 1, name: 'Dress', quantity: 10 },
       { id: 2, name: 'Blouse', quantity: 15 },
-      { id: 3, name: 'Skirt', quantity: 8 }
-    ],
-    men: [
-      { id: 1, name: 'Shirt', quantity: 20 },
-      { id: 2, name: 'Pants', quantity: 12 },
-      { id: 3, name: 'Jacket', quantity: 5 }
-    ],
-    kids: [
-      { id: 1, name: 'T-shirt', quantity: 30 },
-      { id: 2, name: 'Shorts', quantity: 25 },
-      { id: 3, name: 'Sweater', quantity: 10 }
+      { id: 3, name: 'Skirt', quantity: 8 },
+      { id: 4, name: 'Jwellery', quantity: 8 }
     ]
+   
   };
 
   const items = categoryItems[categoryId] || [];

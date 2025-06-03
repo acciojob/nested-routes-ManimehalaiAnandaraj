@@ -9,7 +9,8 @@ const Item = () => {
     women: {
       1: { name: 'Dress', quantity: 10, size: 'M', status: 'In Stock' },
       2: { name: 'Blouse', quantity: 15, size: 'S', status: 'In Stock' },
-      3: { name: 'Skirt', quantity: 8, size: 'L', status: 'Low Stock' }
+      3: { name: 'Skirt', quantity: 8, size: 'L', status: 'Low Stock' },
+      4: { name: 'Jwellery', quantity: 8, size: 'free', status: 'Low Stock' }
     }
   };
 
