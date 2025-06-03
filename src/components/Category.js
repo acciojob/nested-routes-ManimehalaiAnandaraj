@@ -18,7 +18,7 @@ const Category = () => {
   const items = categoryItems[categoryId] || [];
 
   return (
-    <div className="category">
+    <div className="category" data-cy="category" >
       <h2>{categoryId.toUpperCase()} Category</h2>
       <ul className="items-list">
         {items.map(item => (

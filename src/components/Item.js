@@ -17,7 +17,7 @@ const Item = () => {
   const item = itemDetails[categoryId]?.[itemId] || {};
 
   return (
-    <div className="item-details">
+    <div className="item-details" data-cy="item-details">
       <h3>Item Details</h3>
       <p>Name: {item.name}</p>
       <p>Quantity: {item.quantity}</p>

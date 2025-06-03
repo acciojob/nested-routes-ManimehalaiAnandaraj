@@ -3,7 +3,7 @@ import React from 'react';
 
 const Layout = () => {
   return (
-    <div className="app">
+    <div className="app" >
       <nav>
         <h1>E-Commerce Store</h1>
         <ul className="categories">

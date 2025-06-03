@@ -8,7 +8,7 @@ const CategoryList = () => {
   ];
 
   return (
-    <div className="Women Items">
+    <div className="Women Items" data-cy="Women Items">
       <h2>Categories</h2>
       <ul>
         {categories.map(category => (
