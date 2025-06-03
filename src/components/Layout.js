@@ -9,8 +9,7 @@ const Layout = () => {
         <ul className="categories">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/women">Women</Link></li>
-          <li><Link to="/men">Men</Link></li>
-          <li><Link to="/kids">Kids</Link></li>
+          
         </ul>
       </nav>
       

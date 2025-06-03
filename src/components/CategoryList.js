@@ -4,12 +4,11 @@ import React from 'react';
 const CategoryList = () => {
   const categories = [
     { id: 'women', name: 'Women' },
-    { id: 'men', name: 'Men' },
-    { id: 'kids', name: 'Kids' }
+    
   ];
 
   return (
-    <div className="category-list">
+    <div className="Women Items">
       <h2>Categories</h2>
       <ul>
         {categories.map(category => (
