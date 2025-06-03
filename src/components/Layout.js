@@ -1,15 +1,24 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet } from 'react-router-dom';
+import React from 'react';
 
-export default function Layout() {
+const Layout = () => {
   return (
-    <div>
+    <div className="app">
       <nav>
-        <Link to="/category/women">Women</Link> | 
-        <Link to="/category/men">Men</Link>
+        <h1>E-Commerce Store</h1>
+        <ul className="categories">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/women">Women</Link></li>
+          <li><Link to="/men">Men</Link></li>
+          <li><Link to="/kids">Kids</Link></li>
+        </ul>
       </nav>
-      <hr />
-      <Outlet />
+      
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
-}
+};
+
+export default Layout;

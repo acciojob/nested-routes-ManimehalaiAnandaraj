@@ -1,20 +1,23 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./Layout";
-import Category from "./Category";
-import ItemDetail from "./ItemDetail";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import Layout from './Layout';
+import CategoryList from './CategoryList';
+import Category from './Category';
+import Item from './Item';
 
-export default function App() {
+function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<h2>Welcome! Choose a category.</h2>} />
-          <Route path="category/:categoryId" element={<Category />}>
-            <Route path=":itemId" element={<ItemDetail />} />
+          <Route index element={<CategoryList />} />
+          <Route path=":categoryId" element={<Category />}>
+            <Route path="item/:itemId" element={<Item />} />
           </Route>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
+
+export default App;
